@@ -130,7 +130,7 @@ export default function ProductAdv() {
                       alt="Company Logo"
                       style={{
                           width: '100%',
-                          height: '200px', /* Maintains the correct aspect ratio while scaling full width */
+                          height: '150px', /* Maintains the correct aspect ratio while scaling full width */
                           display: 'block'
                       }} 
                   />
