@@ -102,6 +102,7 @@ export default function ProductAdv() {
   };
 
   return (
+
       <div className="page-layout" style={{
           display: 'flex',
           flexDirection: 'column',
@@ -112,13 +113,13 @@ export default function ProductAdv() {
           /* Page-wide Background Configuration */
           backgroundColor: '#fbfaf7',
           backgroundImage: `
-    linear-gradient(30deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
-    linear-gradient(150deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
-    linear-gradient(30deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
-    linear-gradient(150deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
-    linear-gradient(60deg, #f5f2eb 25%, transparent 25.5%, transparent 75%, #f5f2eb 75.5%, #f5f2eb),
-    linear-gradient(60deg, #f5f2eb 25%, transparent 25.5%, transparent 75%, #f5f2eb 75.5%, #f5f2eb)
-  `,
+linear-gradient(30deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
+linear-gradient(150deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
+linear-gradient(30deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
+linear-gradient(150deg, #f3efe6 12%, transparent 12.5%, transparent 87%, #f3efe6 87.5%, #f3efe6),
+linear-gradient(60deg, #f5f2eb 25%, transparent 25.5%, transparent 75%, #f5f2eb 75.5%, #f5f2eb),
+linear-gradient(60deg, #f5f2eb 25%, transparent 25.5%, transparent 75%, #f5f2eb 75.5%, #f5f2eb)
+`,
           backgroundSize: '80px 140px',
           backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px'
       }}>
@@ -130,16 +131,16 @@ export default function ProductAdv() {
                       alt="Company Logo"
                       style={{
                           width: '100%',
-                          height: '100px', /* Maintains the correct aspect ratio while scaling full width */
+                          height: '100px',
                           display: 'block'
-                      }} 
+                      }}
                   />
               </div>
           </header>
 
-          {/* Scrollable Products Section */}
-          <main style={{ flex: 1, overflowY: 'auto', padding: '40px 20px', backgroundColor: 'transparent' }}>
-              <section className={`product-adv ${isHorizontal ? "horizontal" : "vertical"}`}>
+          {/* CHANGED: Removed overflowY, added flex column and overflow hidden to pass sizing constraints down */}
+          <main style={{ flex: 1, padding: '40px 20px', backgroundColor: 'transparent', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+              <section className={`product-adv ${isHorizontal ? "horizontal" : "vertical"}`} style={{ display: 'flex', flexDirection: 'column', flex: 1, overflow: 'hidden' }}>
                   <div className="adv-title">
                       <p>Discover our latest products</p>
                   </div>
@@ -168,26 +169,21 @@ export default function ProductAdv() {
 
           <footer className="company-footer" style={{ width: '100%', background: 'linear-gradient(135deg, #1e1b4b, #311042)', color: '#f8fafc', padding: '8px 40px', zIndex: 1000, borderTop: '1px solid #4f46e5', boxSizing: 'border-box' }}>
               <div className="footer-container" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-
-                  {/* Left Side: Vibrant Electric Cyan Heading */}
                   <h4 style={{ margin: 0, fontSize: '0.875rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#00f5ff' }}>
                       Get In Touch
                   </h4>
-
-                  {/* Center: Brightened Interactive Contact Link */}
                   <div className="contact-links" style={{ display: 'flex', alignItems: 'center' }}>
                       <a href="mailto:tdsystemsforyou@gmail.com" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '600', backgroundColor: '#6366f1', padding: '6px 14px', borderRadius: '20px', border: '1px solid #818cf8', display: 'inline-flex', alignItems: 'center', gap: '6px', boxShadow: '0 0 12px rgba(99, 102, 241, 0.4)' }}>
                           ✉️ tdsystemsforyou@gmail.com
                       </a>
                   </div>
-
-                  {/* Right Side: Clean Bright Silver Copyright */}
                   <p style={{ margin: 0, fontSize: '0.75rem', color: '#cbd5e1', fontWeight: '500' }}>
                       © 2026 · All rights reserved.
                   </p>
               </div>
           </footer>
-
       </div>
+
+
   );
 }
