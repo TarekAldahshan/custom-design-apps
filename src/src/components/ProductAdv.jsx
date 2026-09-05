@@ -166,42 +166,28 @@ export default function ProductAdv() {
               </section>
           </main>
 
-          <footer className="company-footer" style={{
-              width: '100%',
-              backgroundColor: '#0f172a',
-              color: '#f8fafc',
-              padding: '16px 40px', /* Reduced vertical padding for a cleaner single-line look */
-              zIndex: 1000,
-              borderTop: '1px solid #334155',
-              boxSizing: 'border-box'
-          }}>
-              <div className="footer-container" style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'space-between', /* Pushes content to the left, center, and right edges */
-                  maxWidth: '1200px',
-                  margin: '0 auto',
-                  width: '100%'
-              }}>
-                  {/* Left Side: Bright Heading */}
-                  <h4 style={{ margin: 0, fontSize: '0.875rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#38bdf8' }}>
+          <footer className="company-footer" style={{ width: '100%', background: 'linear-gradient(135deg, #1e1b4b, #311042)', color: '#f8fafc', padding: '8px 40px', zIndex: 1000, borderTop: '1px solid #4f46e5', boxSizing: 'border-box' }}>
+              <div className="footer-container" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+
+                  {/* Left Side: Vibrant Electric Cyan Heading */}
+                  <h4 style={{ margin: 0, fontSize: '0.875rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#00f5ff' }}>
                       Get In Touch
                   </h4>
 
-                  {/* Center: Contact Links */}
+                  {/* Center: Brightened Interactive Contact Link */}
                   <div className="contact-links" style={{ display: 'flex', alignItems: 'center' }}>
-                      <a href="mailto:tdsystemsforyou@gmail.com" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '500', backgroundColor: '#1e293b', padding: '8px 16px', borderRadius: '20px', border: '1px solid #475569', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                      <a href="mailto:tdsystemsforyou@gmail.com" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '600', backgroundColor: '#6366f1', padding: '6px 14px', borderRadius: '20px', border: '1px solid #818cf8', display: 'inline-flex', alignItems: 'center', gap: '6px', boxShadow: '0 0 12px rgba(99, 102, 241, 0.4)' }}>
                           ✉️ tdsystemsforyou@gmail.com
                       </a>
                   </div>
 
-                  {/* Right Side: Copyright */}
-                  <p style={{ margin: 0, fontSize: '0.75rem', color: '#94a3b8' }}>
+                  {/* Right Side: Clean Bright Silver Copyright */}
+                  <p style={{ margin: 0, fontSize: '0.75rem', color: '#cbd5e1', fontWeight: '500' }}>
                       © 2026 · All rights reserved.
                   </p>
               </div>
           </footer>
+
       </div>
   );
 }
